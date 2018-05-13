@@ -31,7 +31,7 @@ export class Finished extends PureComponent {
 }
 
 const mapStateToProps = ({ word }) => ({
-  hide: !gameFinished(word)
+  hide: !gameFinished()
 })
 
 export default connect(mapStateToProps)(Finished)

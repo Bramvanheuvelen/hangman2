@@ -19,7 +19,6 @@ class Board extends PureComponent {
   handleSubmit(event) {
     //alert('A letter was submitted: ' + this.state.value);
     event.preventDefault();
-    const guess = this.state.value
   }
 
   render() {
