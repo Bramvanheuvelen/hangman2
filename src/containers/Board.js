@@ -36,8 +36,8 @@ class Board extends React.Component {
       <div className="ShowGuess">{showGuess(this.props.word, this.props.guesses)}</div>
       <div className="wrongGuessCount">{wrongGuessCount(this.props.word, this.props.guesses)}</div>
       <div className="Finished">
-          <div className="lose">{wrongGuessLimit(this.props.word, this.props.guesses)}</div>
-          <div className="win">{isWinner(this.props.word, this.props.guesses)}</div>
+          <div className="lose">{wrongGuessLimit(this.props.word, this.props.guesses) && "LOSE!"}</div>
+          <div className="win">{isWinner(this.props.word, this.props.guesses) && "WIN!"}</div>
       </div>
       </div>
     );
