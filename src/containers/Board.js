@@ -27,7 +27,7 @@ class Board extends PureComponent {
       <form onSubmit={this.handleSubmit}>
         <label>
           Type a letter:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          <input type="text" value={this.state.value} maxlength="1" onChange={this.handleChange} />
         </label>
         <input type="submit" value="Enter" />
       </form>
