@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { newGame, makeGuess } from '../actions/game'
-import { randomWord, showGuess, wrongGuessCount, wrongGuessLimit, isWinner, gameFinished } from '../lib/game'
+import { showGuess, wrongGuessCount, wrongGuessLimit, isWinner } from '../lib/game'
 
 class Board extends React.Component {
   constructor(props) {
@@ -19,12 +19,13 @@ class Board extends React.Component {
   handleSubmit(event) {
     //alert('A letter was submitted: ' + this.state.value);
     event.preventDefault();
+    const guess = this.state.value
+    this.props.makeGuess(guess)
   }
 
   render() {
     return (
       <div className="Board">
-      <button className="NewGameButton" onClick={this.handleClick.bind(this)}>New Game</button>
       <form onSubmit={this.handleSubmit}>
         <label>
           Type a letter:
@@ -35,8 +36,8 @@ class Board extends React.Component {
       <div className="ShowGuess">{showGuess(this.props.word, this.props.guesses)}</div>
       <div className="wrongGuessCount">{wrongGuessCount(this.props.word, this.props.guesses)}</div>
       <div className="Finished">
-          <div lose>{wrongGuessLimit(this.props.word, this.props.guesses)</div
-          <div win>{isWinner(this.props.word, this.props.guesses)}
+          <div className="lose">{wrongGuessLimit(this.props.word, this.props.guesses)}</div>
+          <div className="win">{isWinner(this.props.word, this.props.guesses)}</div>
       </div>
       </div>
     );
