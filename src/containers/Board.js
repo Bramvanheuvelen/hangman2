@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { newGame, makeGuess } from '../actions/game'
 import { showGuess, wrongGuessCount, wrongGuessLimit, isWinner } from '../lib/game'
 
-class Board extends React.Component {
+class Board extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {value: ''};
@@ -20,7 +20,6 @@ class Board extends React.Component {
     //alert('A letter was submitted: ' + this.state.value);
     event.preventDefault();
     const guess = this.state.value
-    this.props.makeGuess(guess)
   }
 
   render() {

@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Board from './containers/Board'
 import NewGameButton from './components/NewGameButton'
+import Finished from './components/Finished'
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <NewGameButton />
           </div>
       <Board />
+      <Finished />
       </div>
     );
   }
