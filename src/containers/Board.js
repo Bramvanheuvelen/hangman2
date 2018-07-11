@@ -1,56 +1,23 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
+import Letters from '../components/Letters'
+import './Board.css'
+import Hangman from '../components/Hangman'
 import { connect } from 'react-redux'
-import { newGame, makeGuess } from '../actions/game'
-import { showGuess, wrongGuessCount, wrongGuessLimit, isWinner } from '../lib/game'
+import { newGame } from '../actions/game'
 
-class Board extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+export class Board extends Component {
+  startNewGame = () => {
+    this.props.newGame()
   }
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
-    //alert('A letter was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
-
-  render() {
-    return (
+  render(){
+    return(
       <div className="Board">
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Type a letter:
-          <input type="text" value={this.state.value} maxlength="1" onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Enter" />
-      </form>
-      <div className="ShowGuess">{showGuess(this.props.word, this.props.guesses)}</div>
-      <div className="wrongGuessCount">{wrongGuessCount(this.props.word, this.props.guesses)}</div>
-      <div className="Finish">
-          <div className="lose">{wrongGuessLimit(this.props.word, this.props.guesses) && "LOSE!"}</div>
-          <div className="win">{isWinner(this.props.word, this.props.guesses) && "WIN!"}</div>
+        <button className="Button" onClick={ this.startNewGame }>New Word</button>
+        <Hangman />
+        <Letters />
       </div>
-      </div>
-    );
-
-
-
-
+    )
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    word: state.word,
-    guesses: state.guesses
-  }
-}
-
-export default connect(mapStateToProps, { newGame, makeGuess })(Board)
+export default connect(null, { newGame })(Board)

@@ -1,16 +1,15 @@
-export const NEW_GAME = 'NEW_GAME'
-export const MAKE_GUESS = 'MAKE_GUESS'
+import { randomWord } from '../lib/game'
 
-export const newGame = Word => {
+export const newGame = () => {
   return {
-    type: NEW_GAME,
-    payload: Word
+    type: 'NEW_GAME',
+    payload: randomWord()
   }
 }
 
-export const makeGuess = guess => {
+export const makeGuess = (letter) => {
   return {
-    type: MAKE_GUESS,
-    payload: guess
+    type: 'MAKE_GUESS',
+    payload: letter
   }
 }

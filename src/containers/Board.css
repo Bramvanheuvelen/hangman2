@@ -1,0 +1,26 @@
+.Board {
+  margin: 1em auto;
+  width: 100%;
+  max-width: 20em;
+}
+
+.Button {
+  margin-left: 9em;
+  padding: 1em;
+  cursor:pointer;
+}
+
+.typeButton {
+  margin-left: 4.5em;
+  cursor:pointer;
+}
+
+.Word {
+  margin: 2em;
+  font-size: 2em;
+}
+
+.Letter{
+  margin: .20em;
+  padding: .8em;
+}

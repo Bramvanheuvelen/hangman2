@@ -1,7 +1,8 @@
-import letterguessed from './letterguessed'
-import word from './word'
+
+import game from './game'
+import guesses from './guesses'
 
 export default {
-  letterguessed,
-  word,
+  game,
+  guesses
 }
