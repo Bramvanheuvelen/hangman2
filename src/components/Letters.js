@@ -21,7 +21,9 @@ class Letters extends Component {
         <input
           type="text"
           ref="letter"
-          placeholder="Type your letter"
+          size="4"
+          maxLength="1"
+          label="Type your letter"
           defaultValue=""
           onChange={this.updateLetter.bind(this)}
         />
