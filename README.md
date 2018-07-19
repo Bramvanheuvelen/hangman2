@@ -1,8 +1,8 @@
-![react icon](https://github.com/Zefevr/hangman-react-redux/blob/master/public/dev-icons/react.svg) 
-![redux icon](https://github.com/Zefevr/hangman-react-redux/blob/master/public/dev-icons/redux.svg) 
-![js icon](https://github.com/Zefevr/hangman-react-redux/blob/master/public/dev-icons/js.svg) 
-![html icon](https://github.com/Zefevr/hangman-react-redux/blob/master/public/dev-icons/html.svg) 
-![css icon](https://github.com/Zefevr/hangman-react-redux/blob/master/public/dev-icons/css.svg)
+![react icon](https://github.com/Bramvanheuvelen/hangman_homework/blob/master/public/dev-icons/react.svg) 
+![redux icon](https://github.com/Bramvanheuvelen/hangman_homework/blob/master/public/dev-icons/redux.svg) 
+![js icon](https://github.com/Bramvanheuvelen/hangman_homework/blob/master/public/dev-icons/js.svg) 
+![html icon](https://github.com/Bramvanheuvelen/hangman_homework/blob/master/public/dev-icons/html.svg) 
+![css icon](https://github.com/Bramvanheuvelen/hangman_homework/blob/master/public/dev-icons/css.svg)
 
 ## The Hangman Game using React-redux:
 > Assigment made for Codaissuer
